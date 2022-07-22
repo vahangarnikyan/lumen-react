@@ -1,0 +1,144 @@
+.widget {
+  .team {
+    display: flex;
+    align-items: center;
+
+    .team-logo {
+      img {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    .team-name {
+      margin-left: $spacer / 2;
+    }
+  }
+
+  &.adsense-widget {
+    // border: 1px solid $border-color;
+    margin-bottom: $spacer;
+    picture {
+      display: block;
+      text-align: center;
+    }
+    
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &.leaderboard-widget {
+    border: 0;
+
+    .card-header {
+      border: 1px solid $border-color;
+    }
+
+
+    .card-body {
+      padding: 0;
+
+      .table {
+        margin-bottom: 0;
+
+        hr {
+          margin-top: $table-cell-padding;
+          margin-bottom: $table-cell-padding;
+        }
+      }
+    }
+  }
+
+  &.games-widget {
+    border: 0;
+
+    .card-header {
+      border: 1px solid $border-color;
+    }
+
+    .card-body {
+      padding: 0;
+
+      .table {
+        margin-bottom: 0;
+
+        td {
+          vertical-align: middle;
+        }
+
+        .select2-container {
+          width: 100% !important;
+        }
+
+        hr {
+          margin-top: $table-cell-padding;
+          margin-bottom: $table-cell-padding;
+        }
+
+        .game-bet-over,
+        .game-bet-under {
+          position: relative;
+          width: 46px;
+          line-height: 30px;
+          color: $white;
+
+          &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 23px solid transparent;
+            border-right: 23px solid transparent;
+          }
+        }
+
+        .game-bet-over {
+          background-color: $success;
+
+          &::before {
+            border-bottom: 10px solid $success;
+            top: -10px;
+          }
+        }
+
+        .game-bet-under {
+          background-color: $danger;
+
+          &::before {
+            border-top: 10px solid $danger;
+            bottom: -10px;
+          }
+        }
+
+      }
+    }
+
+  }
+
+  &.top-picks-widget {
+    border: 0;
+
+    .card-header {
+      border: 1px solid $border-color;
+    }
+
+    .card-body {
+      padding: 0;
+
+      .table {
+        margin-bottom: 0;
+
+        td {
+          vertical-align: middle;
+        }
+
+        hr {
+          margin-top: $table-cell-padding;
+          margin-bottom: $table-cell-padding;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  .site-main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    position: relative;
+    z-index: 0;
+    
+    .site-login {
+      background-color: $site-background;
+      padding: 50px 0;
+
+      @media screen and (max-width: 768px) {
+        padding: 0 10px;
+      }
+
+      .row {
+        &>div {
+          h2 {
+            color: $site-color;
+            font-weight: bold;
+          }
+    
+          button {
+            background-color: $site-color;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            height: 40px;
+            letter-spacing: 5px;
+            width: 100%;
+          }
+
+          @media screen and (min-width: 768px) {
+            &:first-child {
+              padding: 0 40px 0 0;
+              border-right: 1px solid #cccccc;
+            }
+
+            &:last-child {
+              padding: 0 0 0 40px;
+            }
+          }
+        }
+      }
+    }
+
+    .site-content {
+      padding: 50px 0;
+
+      h3.text-center {
+        color: $site-color;
+      }
+
+      .row {
+        &>div {
+          margin: 20px 0;
+        }
+      }
+    }
+
+    .site-social {
+      background-color: $site-color;
+      padding: 50px 0;
+
+      a {
+        i {
+          background-color: white;
+          border-radius: 50%;
+          color: $site-color;
+          font-size: 36px;
+          height: 50px;
+          margin-bottom: 20px;
+          padding-top: 7px;
+          text-align: center;
+          width: 50px;
+        }
+      }
+
+      span {
+        color: white;
+      }
+    }
+
+    .dashboard {
+      margin-top: 20px;
+
+      @media screen and (max-width: 768px) {
+        .container {
+          form {
+            .col-8 {
+              flex: 0 0 50%;
+              max-width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .site {
+    .site-main {
+      .dashboard {
+        margin-top: 5px;
+      }
+    }
+  }
+}

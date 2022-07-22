@@ -1,0 +1,52 @@
+.site-footer {
+  background-color: $dark;
+  color: $white;
+  padding: 10px;
+
+  .footer-menu {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      a {
+        color: $white;
+      }
+    }
+  }
+
+  .social-menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0;
+    li {
+      margin-right: 10px;
+      a {
+        i {
+          width: 30px;
+          height: 30px;
+          line-height: 26px;
+          text-align: center;
+          border: 2px solid currentColor;
+          border-radius: 50px;
+        }
+        .fa-google-plus {
+          color: theme-color('google');
+        }
+        .fa-facebook {
+          color: theme-color('facebook');
+        }
+        .fa-twitter {
+          color: theme-color('twitter');
+        }
+      }
+    }
+  }
+}
